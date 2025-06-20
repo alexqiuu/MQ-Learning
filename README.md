@@ -1,69 +1,83 @@
-# MQ Learning 🎯  
-*AI-Powered Trait Feedback Using LLMs + Psychometric Modeling*
+# MQ Learning: AI-Powered Trait Feedback and Psychometric Modeling
 
-## Overview
+## Project Overview
 
-MQ Learning is a psychological assessment tool built to help users understand their **motivational traits**—like curiosity, independence, altruism, and more—through a personalized 20-minute test. The platform uses **Large Language Models (LLMs)** with **Retrieval-Augmented Generation (RAG)** to generate real-time feedback grounded in behavioral research.
+MQ Learning is a psychological assessment tool designed to measure and interpret individual motivational traits using a combination of psychometric methods and natural language processing. Users complete a 20-minute digital assessment that evaluates core dimensions such as independence, curiosity, altruism, and collaboration.
 
-Our goal is to bridge the gap between AI-driven personalization and traditional psychometrics, offering a fun, data-backed way to reflect on how we learn, work, and grow.
+Using these inputs, the platform leverages Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) to generate tailored, research-backed feedback in real time. The goal is to provide users with accurate and actionable insights that can be applied to personal development, career alignment, team dynamics, and educational support.
 
----
-
-## 🔍 Key Features
-
-- ✍️ **20-minute psychological test** with research-aligned questions  
-- 🧠 **LLM feedback generation** tailored to user trait scores  
-- 📚 **RAG pipeline** fetches relevant theory and examples for adaptive outputs  
-- 📊 Visual trait reports benchmarked against global data  
-- 🧩 Use cases: education, career alignment, HR tools, coaching, relationships
+This project was built as a student-led initiative exploring the intersection of behavioral science and machine learning.
 
 ---
 
-## 📌 How It Works
+## Objectives
 
-1. **Users complete an assessment** (Likert-style + scenario-based questions)
-2. **Trait scores** (e.g. for independence, altruism, curiosity) are calculated
-3. A **prompt pipeline** feeds these scores + user context into an LLM
-4. LLM generates **adaptive feedback** using RAG (theory + real-world analogies)
-5. Results are returned with **visuals, comparisons**, and takeaways
-
----
-
-## 💻 Tech Stack
-
-- `Python` (scikit-learn, NumPy, pandas)
-- `OpenAI API` + `LangChain`
-- `RAG (Retrieval-Augmented Generation)`
-- `Markdown` + `Streamlit` (for UI prototyping)
-- `Matplotlib` (for trait visualization)
+- Design and deploy a psychometric engine capable of scoring behavioral traits based on structured questionnaire data.
+- Generate adaptive and personalized written feedback using an LLM fine-tuned for psychological interpretation.
+- Employ Retrieval-Augmented Generation (RAG) to enhance trait feedback with relevant research literature and real-world analogies.
+- Visualize comparative trait scores and benchmarks across anonymized global datasets.
 
 ---
 
-## 🧪 Sample Trait Feedback
+## Key Features
 
-<img src="./demo/trait_feedback_sample.png" width="600"/>
-
----
-
-## 🧠 Example Use Case
-
-Let’s say you score high in **independence** and low in **team-driven curiosity**.  
-Your feedback might say:
-
-> "You tend to explore problems on your own terms, often preferring self-direction over external validation. People like you thrive in flexible environments with space to initiate and adapt. Compared to peers, your curiosity feels more inward-driven—less about collaboration, more about mastery."
-
-> However, you can always ask the RAG model for advice, comparisons, statistics, graphs etc. Give it a try!
+- **Real-Time Trait Feedback**: Personalized narratives are generated instantly after assessment completion.
+- **RAG-Enhanced Prompting**: Trait feedback is dynamically constructed using modular prompts and external knowledge bases.
+- **User Comparison Visuals**: Trait scores are benchmarked across a larger sample to offer perspective and context.
+- **Use Case Versatility**: Designed for applications in education, coaching, hiring, personal development, and career counseling.
 
 ---
 
-## 📂 Repository Breakdown
+## System Workflow
 
-| Folder        | Description |
-|---------------|-------------|
-| `app/`        | LLM prompt pipeline, RAG logic, prompt templates |
-| `data/`       | Sample (anonymized) trait data |
-| `notebooks/`  | Jupyter notebooks for scoring and exploratory analysis |
-| `demo/`       | Sample outputs and images |
-| `requirements.txt` | Required Python libraries |
+1. **Assessment Completion**: Users respond to a set of Likert-scale and situational questions.
+2. **Score Computation**: Individual trait scores are computed through a custom scoring function.
+3. **Prompt Construction**: Trait scores are injected into pre-structured prompts along with behavioral labels and examples.
+4. **RAG Pipeline**: Each prompt queries a vectorized knowledge base to retrieve trait-relevant material.
+5. **LLM Response Generation**: A final LLM call returns written feedback for each trait, grounded in retrieved context.
+6. **Output Delivery**: Feedback is rendered as a user-facing report with visual summaries.
 
 ---
+
+## Technology Stack
+
+- **Languages & Tools**: Python, Markdown
+- **Libraries**: NumPy, pandas, scikit-learn, matplotlib, LangChain
+- **APIs**: OpenAI API (for LLM integration)
+- **Frameworks**: Streamlit (for prototype UI)
+- **Data Formats**: JSON, CSV
+- **Modeling Approaches**: Prompt engineering, trait vector scoring, response filtering
+
+---
+
+## Repository Structure
+
+| Folder / File          | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| `app/`                 | Core logic for prompt engineering, trait scoring, and RAG feedback generation |
+| `data/`                | Sample (anonymized) response data and scoring keys                         |
+| `demo/`                | Example trait outputs and screenshots of the prototype                     |
+| `notebooks/`           | Exploratory analysis, feature validation, and trait distribution plots      |
+| `requirements.txt`     | List of Python dependencies                                                 |
+| `README.md`            | This documentation file                                                     |
+
+---
+
+## Sample Output
+
+A user scoring high in independence and moderate in altruism might receive feedback such as:
+
+> "Your responses reflect a strong preference for autonomous learning and decision-making. You are likely to thrive in self-directed environments and may prefer minimal external supervision. While you often consider others, your primary drive stems from personal curiosity and initiative. This combination suggests a balance between introspective motivation and social awareness."
+
+---
+
+## Future Work
+
+- Expand the trait taxonomy using established models like Big Five and HEXACO
+- Add reliability and validity checks: Cronbach’s alpha, test-retest reliability
+- Implement a secure backend for persistent user reports
+- Deploy a web-based UI using Flask or Streamlit
+- Integrate with Notion or LinkedIn for career mapping and team analytics
+
+---
+
