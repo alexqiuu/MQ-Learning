@@ -8,6 +8,8 @@ Using these inputs, the platform leverages Large Language Models (LLMs) with Ret
 
 This project was built as a student-led initiative exploring the intersection of behavioral science and machine learning.
 
+Check out the website! 
+[MQ LEARNING](https://mq.equalearning.net/)
 ---
 
 ## Objectives
