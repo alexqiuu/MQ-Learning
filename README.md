@@ -62,5 +62,5 @@ A user scoring high in independence and moderate in altruism might receive feedb
 ---
 
 ## 
-View the report[MQ Learning Report](./MQ_report.pdf)
+[MQ Learning Report](./MQ_Report.pdf)
 
