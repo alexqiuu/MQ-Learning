@@ -52,18 +52,6 @@ Check out the website!
 
 ---
 
-## Repository Structure
-
-| Folder / File          | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| `app/`                 | Core logic for prompt engineering, trait scoring, and RAG feedback generation |
-| `data/`                | Sample (anonymized) response data and scoring keys                         |
-| `demo/`                | Example trait outputs and screenshots of the prototype                     |
-| `notebooks/`           | Exploratory analysis, feature validation, and trait distribution plots      |
-| `requirements.txt`     | List of Python dependencies                                                 |
-| `README.md`            | This documentation file                                                     |
-
----
 
 ## Sample Output
 
@@ -73,13 +61,6 @@ A user scoring high in independence and moderate in altruism might receive feedb
 
 ---
 
-## Future Work
-
-- Expand the trait taxonomy using established models like Big Five and HEXACO
-- Add reliability and validity checks: Cronbach’s alpha, test-retest reliability
-- Implement a secure backend for persistent user reports
-- Deploy a web-based UI using Flask or Streamlit
-- Integrate with Notion or LinkedIn for career mapping and team analytics
-
----
+## 
+View the report[MQ Learning Report](./MQ_report.pdf)
 
