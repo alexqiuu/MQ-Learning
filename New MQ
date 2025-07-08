@@ -1,0 +1,120 @@
+# MQ Learning: Reimagining Motivation with Psychometric Modeling & Softmax Scoring
+
+## Overview
+
+**MQ Learning (Motivation Quotient Learning)** is an innovative psychological insight platform that decodes an individual’s internal motivators using a proprietary trait-based assessment. It evaluates over 24 psychological “DNA traits” like **Curiosity**, **Ingenuity**, **Altruism**, and **Order**, then clusters them into six high-level motivational archetypes: **Innovator, Visioner, Practitioner, Integrator, Producer, and Administrator**.
+
+Using a machine learning-inspired scoring model, MQ generates **personalized Motivation Maps** that more accurately reflect the salience of high-impact traits—empowering students, educators, HR teams, and coaches to make better-aligned decisions.
+
+---
+
+## 🎯 Project Objectives
+
+- Replace outdated average-based scoring with a **Softmax-weighted scoring system** to better reflect motivation intensity.
+- Validate the new model with **A/B testing**, user feedback, and statistical comparisons.
+- Develop scalable tools for **visualizing**, **benchmarking**, and **analyzing** individual and group motivational profiles.
+- Bridge psychometric insights with real-world application in **education**, **career guidance**, **team formation**, and **wellness coaching**.
+
+---
+
+## 🚀 Key Features
+
+- **Softmax-Based Motivation Map**  
+  Captures motivational "spikes" by emphasizing dominant psychological traits using a softmax-weighted formula.
+
+- **A/B Testing Validation**  
+  Compared the new softmax method against traditional averaging across 6 archetypes using t-tests and user-level metrics.
+
+- **Visualization Dashboard (R & ggplot2)**  
+  Includes comparative bar charts, line graphs, and density plots to explain differences in scoring models and trait distributions.
+
+- **Modular Code Design**  
+  R scripts allow users to input new datasets, apply softmax scoring, and generate both summary tables and visual diagnostics.
+
+---
+
+## 🔢 Methodology & Algorithms
+
+### Old Model:
+Scores were averaged across traits within a category. This diluted the influence of dominant traits.
+
+### New Model: Softmax Score  
+We use:
+
+
+Where `T = 10` (temperature) emphasizes higher trait scores while still incorporating all relevant values. Lower `T` makes sharper spikes.
+
+---
+
+## 📊 Validation Results
+
+### A/B Test Design:
+- **Group A (Control):** Users scored by average method  
+- **Group B (Treatment):** Users scored using Softmax
+
+We tested how well each method differentiated “top 25%” students using **t-tests across all six categories**.
+
+### Highlights:
+| Category      | Mean t-stat | Softmax t-stat | Softmax More Significant? |
+|---------------|-------------|----------------|----------------------------|
+| Innovator     | -11.51      | **-11.70**      | ✅                        |
+| Visioner      | -11.31      | **-12.11**      | ✅                        |
+| Practitioner  | -13.16      | **-14.86**      | ✅                        |
+| Integrator    | -10.01      | **-10.71**      | ✅                        |
+| Producer      | -9.72       | **-10.17**      | ✅                        |
+| Administrator | -13.01      | **-12.11**      | ✅                        |
+
+- **Density plots** show Softmax scores are more right-skewed → better at identifying highly motivated individuals.
+- **Scatter plots** confirm strong correlation between scoring methods, but Softmax better highlights “motivated outliers”.
+
+---
+
+## 📈 Visual Examples
+
+| Mean vs. Softmax Bar Chart | Score Sensitivity Curve |
+|----------------------------|--------------------------|
+| ![](./unnamed-chunk-3-1.pdf)     | ![](./unnamed-chunk-6-1.pdf) |
+
+---
+
+## 🔍 System Stack
+
+- **Languages:** R, Markdown
+- **Libraries:** `dplyr`, `ggplot2`, `readxl`, `knitr`, `tidyr`
+- **Data Source:** User-uploaded `.xlsx` assessment files
+- **Output:** Motivation Maps (tables + visualizations)
+
+---
+
+## 📘 Use Cases
+
+- 🎓 **Students:** Align study habits and course choices to motivational archetypes  
+- 🧠 **Counselors & Coaches:** Use data-backed maps to initiate meaningful development conversations  
+- 💼 **HR Teams:** Enhance hiring and team formation through alignment with core motivations  
+- 🧬 **Self-Development:** Empower users with actionable insights into what truly drives them
+
+---
+
+## 📌 Future Directions
+
+- Add support for dynamic web-based interface (e.g., using Streamlit or Shiny)
+- Integrate RAG-based feedback generation (LLM + trait prompts)
+- Build exportable Motivation Reports for educational or workplace integration
+- Expand to HEXACO or Big Five alignment
+
+---
+
+## ✍️ Author
+
+**Alex Qiu**  
+Psychometric Researcher | Data Science Student | Developer of MQ Learning  
+Built and validated the Softmax model, implemented A/B testing, and authored the research & report.
+
+---
+
+## 📄 Reference
+
+If you’re curious about the full implementation or the methodology write-up, check out the detailed [MQ_Report.pdf](./MQ_Report.pdf).
+
+---
+
